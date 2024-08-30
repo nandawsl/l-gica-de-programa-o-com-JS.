@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Hemocentro</title>
+    <style>
+        /* Estilo geral do corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #2acf56;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Estilo da lista de navegação no cabeçalho */
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        /* Estilo dos itens da lista de navegação */
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        /* Estilo dos links de navegação */
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Estilo das seções principais de conteúdo */
+        #main-content, #campaigns, #registered-donors, #contact {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* Estilo dos títulos das seções */
+        #main-content h2, #campaigns h2, #registered-donors h2, #contact h2 {
+            color: #e74c3c;
+        }
+
+        /* Estilo do botão para registrar doadores */
+        #btn-register {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Efeito de hover no botão */
+        #btn-register:hover {
+            background-color: #c0392b;
+        }
+
+        /* Estilo geral das imagens */
+        img{
+            
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do site com título e navegação -->
+    <header>
+        <h1>HemocentroFernanda</h1>
+        <nav>
+            <ul>
+                <li><a href="#main-content">Início</a></li>
+                <li><a href="#campaigns">Campanhas</a></li>
+                <li><a href="#registered-donors">Doadores</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal de boas-vindas -->
+    <section id="main-content">
+        <h2>Bem-vindo ao Sistema de Hemocentro</h2>
+        <p>Doe sangue, salve vidas.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBizRGgepfi1yrjyW5eNapjDw2C-guXfAS5Q&s"></p>
+        
+        <button id="btn-register">Registrar um Doador</button>
+    </section>
+
+    <!-- Seção de campanhas atuais -->
+    <section id="campaigns">
+        <h2>Campanhas Atuais</h2>
+        <p>Participe de nossas campanhas de doação de sangue e ajude a salvar vidas!</p>
+        
+    </section>
+
+    <!-- Seção de doadores registrados -->
+    <section id="registered-donors">
+        <h2>Doadores Registrados</h2>
+        <ul id="list">
+            <!-- Exemplos de doadores registrados -->
+            <li>João Silva</li>
+            <li>Maria Oliveira</li>
+            <li>Pedro Santos</li>
+            <li>Ana Costa</li>
+        </ul>
+        
+    </section>
+
+    <!-- Seção de contato -->
+    <section id="contact">
+        <h2>contato</h2>
+        <p>Entre em contato conosco para mais informações.</p>
+        <p>Email: silvafernandasilva736@hemocentro.com.br</p>
+        <p>Telefone: (11) 1234-5678</p>
+        
+    </section>
+
+    <!-- Rodapé com informações de copyright -->
+    <footer>
+        <p>&copy; 2024 Hemocentro. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Adiciona um evento de clique ao botão de registrar doador
+        document.getElementById('btn-register').addEventListener('click', function() {
+            // Solicita o nome do doador e adiciona à lista de doadores
+            const donorName = prompt('Digite o nome do doador:');
+            if(donorName) {
+                const listItem = document.createElement('li');
+                listItem.textContent = donorName;
+                document.getElementById('list').appendChild(listItem);
+            }
+        });
+    </script>
+</body>
+</html>
